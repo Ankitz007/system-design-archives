@@ -16,6 +16,7 @@ The CAP Theorem provides a framework for thinking about these challenges.
 
 First formally conjectured by computer scientist Eric Brewer in 2000 and later proven by Seth Gilbert and Nancy Lynch in 2002, the CAP Theorem states:
 
+> [!IMPORTANT]  
 > It is impossible for a distributed data store to simultaneously provide more than two out of the following three guarantees: **Consistency**, **Availability**, and **Partition Tolerance**.
 
 Let's break down each of these guarantees in the context of distributed systems:
@@ -27,7 +28,9 @@ Let's break down each of these guarantees in the context of distributed systems:
 - **Definition**: All nodes in the system see the same data at the same time. More formally, any read operation that begins after a write operation completes must return that new value, or the result of a later write. All clients interacting with the system have the same view of the data.
 - **In Simpler Terms**: If you write a value `X=10` to the system, any subsequent read of `X` by any client connected to any node should return `10` (until `X` is updated again). There's no stale data.
 - **Analogy**: Think of a single, perfectly synchronized shared digital whiteboard. When someone writes something, everyone looking at the whiteboard sees the update instantaneously.
-- **Important Note**: CAP Theorem typically refers to strong consistency (specifically, linearizability). Weaker forms of consistency exist (like eventual consistency), but the theorem's trade-off applies most directly to the strong guarantee.
+
+> [!IMPORTANT]
+> CAP Theorem typically refers to strong consistency (specifically, linearizability). Weaker forms of consistency exist (like eventual consistency), but the theorem's trade-off applies most directly to the strong guarantee.
 
 ### (A) Availability
 
@@ -87,10 +90,6 @@ Based on the choice made during a partition, distributed systems are often categ
   - Distributed coordination services like ZooKeeper, etcd, Consul.
   - MongoDB can be configured for stronger consistency, potentially behaving as CP during partitions (writes require acknowledgment from a majority, reads can target the primary or a majority).
 
-> Banking systems typically prioritize consistency over availability since data accuracy is more critical than availability during network issues.
->
-> Consider an ATM network for a bank. When you withdraw money, the system must ensure that your balance is updated accurately across all nodes (consistency) to prevent overdrafts or other errors.
-
 ### AP Systems (Availability + Partition Tolerance)
 
 - **Prioritizes**: System uptime and responsiveness, even if it means data might be temporarily inconsistent.
@@ -127,3 +126,7 @@ The CAP Theorem is a foundational principle stating that distributed data stores
 Because network **Partitions** are unavoidable in distributed systems, the practical choice is between **C** and **A** when partitions happen.
 
 Understanding CAP helps architects and developers make informed decisions about system design, choosing the right database or architecture based on the specific requirements for data correctness versus system uptime for their application. It highlights the inherent trade-offs that must be managed when building reliable systems at scale.
+
+## 8. References
+
+- [CAP Theorem Explained](https://blog.algomaster.io/p/cap-theorem-explained)
