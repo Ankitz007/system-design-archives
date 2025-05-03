@@ -10,5 +10,8 @@ These notes are a collection of notes on system design, architecture, and best p
 
 ## References
 
+These notes are based on various sources, the most relevant ones being:
+
+- [DesignGurus](https://www.designgurus.io/)
 - [AlgoMaster Blog and Newsletter](https://blog.algomaster.io/)
 - [Google Gemini](https://gemini.google.com/app?hl=en-IN)

@@ -91,3 +91,7 @@ PACELC provides a more comprehensive framework than CAP for understanding distri
 - **Else (during normal operation),** we must choose between Latency and Consistency.
 
 By considering both scenarios, PACELC helps architects evaluate systems based on their behavior during both network failures and normal operation, leading to better-informed design decisions that balance correctness, uptime, and performance according to application requirements.
+
+## 8. References
+
+- [CAP vs PACELC](https://www.designgurus.io/blog/system-design-interview-basics-cap-vs-pacelc)
