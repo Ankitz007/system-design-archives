@@ -6,6 +6,7 @@ These notes are a collection of notes on system design, architecture, and best p
 
 - Basic Concepts
   - [CAP Theorem](/basics/1-cap-theorem.md)
+  - [PACELC Theorem](/basics/2-pacelc-theorem.md)
 
 ## References
 
