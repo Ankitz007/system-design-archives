@@ -5,8 +5,10 @@ These notes are a collection of notes on system design, architecture, and best p
 ## Table of Contents
 
 - Basic Concepts
-  - [CAP Theorem](/basics/1-cap-theorem.md)
-  - [PACELC Theorem](/basics/2-pacelc-theorem.md)
+  - Key Characteristics of Distributed Systems
+    - [Consistency](/basics/1-consistency.md)
+  - [CAP Theorem](/basics/98-cap-theorem.md)
+  - [PACELC Theorem](/basics/99-pacelc-theorem.md)
 
 ## References
 
@@ -15,3 +17,4 @@ These notes are based on various sources, the most relevant ones being:
 - [DesignGurus](https://www.designgurus.io/)
 - [AlgoMaster Blog and Newsletter](https://blog.algomaster.io/)
 - [Google Gemini](https://gemini.google.com/app?hl=en-IN)
+- [ChatGPT](https://chat.openai.com/)
