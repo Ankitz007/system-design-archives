@@ -59,7 +59,7 @@ Strong consistency, also known as **linearizability**, guarantees that all clien
 - **Distributed coordination**: Systems like leader election and distributed locks require strict synchronization to ensure tasks or resources are managed consistently across nodes.
 - **Configuration and metadata management**: Distributed systems often rely on shared configuration or metadata (e.g., system settings, quotas, or state information). Strong consistency ensures updates to these values are immediately synchronized across all nodes, preventing conflicting states.
 
-### Real-World Example
+#### Real-World Example
 
 - **Google Spanner**: A globally distributed database that uses a combination of atomic clocks and consensus algorithms to provide strong consistency across data centers, ensuring that all nodes see the same data at the same time.
 - **Zookeeper**: A distributed coordination service that uses a consensus protocol to ensure strong consistency for configuration management and leader election, making it suitable for applications requiring strict synchronization.
@@ -92,7 +92,7 @@ Sequential consistency ensures that all operations occur in a logical order. The
 - **Gaming systems**: Ensures actions happen in the correct order for all players, such as moves in turn-based games, even if operations aren’t synchronized in real-time.
 - **Collaborative editing**: Guarantees ordered application of updates in shared workspaces, like document editing platforms, ensuring all collaborators’ edits appear in the correct sequence.
 
-#### Real-World Example
+##### Real-World Example
 
 - **Distributed databases**: Some databases, like Amazon DynamoDB with specific configurations, can provide sequential consistency for certain operations, ensuring that all clients see updates in the same order.
 - **Distributed file systems**: Systems like Google File System (GFS) may provide sequential consistency for file operations, ensuring that all clients see file updates in the same order, even if they are not immediately visible.
@@ -126,7 +126,7 @@ Causal consistency ensures that operations with a cause-and-effect relationship 
 - **Collaborative platforms**: Applications like Google Docs or shared workspaces, where causally related updates (e.g., editing text and applying formatting) must be applied in the correct order.
 - **Messaging apps**: Ensures messages are delivered in the order they were sent, maintaining logical coherence in conversations without requiring global synchronization.
 
-#### Real-World Example
+##### Real-World Example
 
 - **Amazon DynamoDB**: Offers a causal consistency option, allowing applications to read data in a way that respects the causal relationships between writes, making it suitable for collaborative applications.
 - **Google Docs**: Uses causal consistency to ensure that edits made by one user are visible to others in the correct order, even if they are not immediately synchronized.
@@ -170,7 +170,7 @@ Session guarantees aim to improve user experience by ensuring that a client’s 
 - **Product recommendations**: Provides personalized suggestions without requiring real-time consistency, allowing recommendation systems to sync across nodes gradually.
 - **Inventory counts**: Tracks stock across distributed warehouses or regions, tolerating brief inconsistencies while ensuring eventual convergence to accurate totals.
 
-#### Real-World Example
+##### Real-World Example
 
 - **Amazon DynamoDB**: Uses eventual consistency as its default model, allowing for high availability and low latency while ensuring that all replicas eventually converge to the same state.
 - **Apache Cassandra**: Employs eventual consistency to provide high availability and partition tolerance, allowing for low-latency writes and reads while ensuring that all replicas eventually synchronize.
