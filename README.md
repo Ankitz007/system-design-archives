@@ -7,6 +7,7 @@ These notes are a collection of notes on system design, architecture, and best p
 - Basic Concepts
   - Key Characteristics of Distributed Systems
     - [Consistency](/basics/1-consistency.md)
+    - [Availability](/basics/2-availability.md)
   - [CAP Theorem](/basics/98-cap-theorem.md)
   - [PACELC Theorem](/basics/99-pacelc-theorem.md)
 
